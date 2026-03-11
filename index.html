@@ -8,14 +8,14 @@
     <style>
         :root {
             --primary-color: #2c3e50; /* Azul marinho clássico */
-            --secondary-color: #ecf0f1;
-            --text-color: #333;
+            --secondary-color: #f4f7f6;
+            --text-color: #2c3e50;
             --accent-color: #7f8c8d;
         }
 
         body {
-            font-family: 'Georgia', serif; /* Fonte serifada para tom acadêmico */
-            line-height: 1.6;
+            font-family: 'Georgia', serif; /* Fonte clássica para Sociologia */
+            line-height: 1.8;
             margin: 0;
             padding: 0;
             color: var(--text-color);
@@ -25,55 +25,96 @@
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
+            border-bottom: 5px solid #1a252f;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-style: italic;
+            margin-top: 0.5rem;
+            opacity: 0.9;
         }
 
         nav {
-            background: #f8f9fa;
-            border-bottom: 1px solid #ddd;
+            background: white;
+            border-bottom: 1px solid #eee;
             text-align: center;
             position: sticky;
             top: 0;
+            z-index: 1000;
         }
 
         nav a {
             text-decoration: none;
             color: var(--primary-color);
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             display: inline-block;
             font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
         }
 
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 750px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
         }
 
-        section { margin-bottom: 3rem; }
+        section { margin-bottom: 4rem; }
 
         h2 {
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 1px solid #ccc;
             color: var(--primary-color);
             padding-bottom: 0.5rem;
+            font-variant: small-caps;
         }
 
-        .pub-item { margin-bottom: 1.5rem; }
-        .pub-title { font-weight: bold; display: block; }
-        .pub-meta { font-style: italic; color: var(--accent-color); font-size: 0.9rem; }
+        .bio-text {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .affiliation-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .affiliation-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .contact-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            margin: 0 15px;
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
 
         footer {
             background: var(--secondary-color);
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 1rem;
             margin-top: 5rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-links a {
-            margin: 0 10px;
-            color: var(--primary-color);
+            font-size: 0.85rem;
+            color: var(--accent-color);
         }
     </style>
 </head>
@@ -81,49 +122,35 @@
 
 <header>
     <h1>Luccas Eduardo Ferraz da Silva</h1>
-    <p>Sociólogo | Pesquisador</p>
+    <p>Ciências Sociais | USP</p>
 </header>
 
 <nav>
     <a href="#sobre">Sobre</a>
-    <a href="#publicacoes">Publicações</a>
+    <a href="#filiacoes">Filiações</a>
     <a href="#contato">Contato</a>
 </nav>
 
 <div class="container">
     <section id="sobre">
         <h2>Sobre</h2>
-        <p>Olá! Sou Luccas Eduardo, pesquisador na área de Sociologia. Meus interesses de pesquisa concentram-se em [Insira aqui seus temas: ex: Teoria Sociológica, Sociologia Urbana ou Desigualdades]. Atualmente, desenvolvo meus estudos na Universidade de São Paulo (USP).</p>
+        <p class="bio-text">
+            Graduando em Ciências Sociais, com interesse na sociologia urbana. 
+            Minha trajetória acadêmica é voltada para a compreensão das dinâmicas espaciais e sociais das cidades.
+        </p>
     </section>
 
-    <section id="publicacoes">
-        <h2>Publicações Selecionadas</h2>
-        
-        <div class="pub-item">
-            <span class="pub-title">Título do Seu Artigo Mais Importante</span>
-            <span class="pub-meta">Revista Brasileira de Sociologia, 2024.</span>
-        </div>
-
-        <div class="pub-item">
-            <span class="pub-title">Título da Sua Dissertação ou Tese</span>
-            <span class="pub-meta">Universidade de São Paulo (USP), 2023.</span>
-        </div>
+    <section id="filiacoes">
+        <h2>Grupos e Projetos</h2>
+        <ul class="affiliation-list">
+            <li><strong>UrbanData-Brasil:</strong> Banco de Dados sobre o Brasil Urbano.</li>
+            <li><strong>Podcast Urbanidades:</strong> Membro da equipe de produção/conteúdo.</li>
+        </ul>
     </section>
 
     <section id="contato">
-        <h2>Contato</h2>
-        <p>Sinta-se à vontade para entrar em contato para colaborações acadêmicas.</p>
+        <h2>Contato Acadêmico</h2>
+        <p>Estou aberto a trocas sobre pesquisas urbanas e colaborações em projetos.</p>
         <div class="contact-links">
-            <a href="mailto:seu-email@usp.br">E-mail</a> |
-            <a href="https://lattes.cnpq.br/seu-id">Lattes</a> |
-            <a href="https://orcid.org/seu-id">ORCID</a>
-        </div>
-    </section>
-</div>
-
-<footer>
-    &copy; 2026 Luccas Eduardo Ferraz da Silva. Criado com o auxílio do Gemini USP.
-</footer>
-
-</body>
-</html>
+            <a href="mailto:seu-email@usp.br">E-mail Institucional</a>
+            <a href="https://lattes.cnpq.br/seu-id">Curr
